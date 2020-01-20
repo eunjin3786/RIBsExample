@@ -15,19 +15,26 @@ protocol LoggedInDependency: Dependency {
     // created by this RIB.
 }
 
-final class LoggedInComponent: Component<LoggedInDependency> {
+final class LoggedInComponent: Component<LoggedInDependency>, MemosDependency {
 
     // TODO: Make sure to convert the variable into lower-camelcase.
     fileprivate var LoggedInViewController: LoggedInViewControllable {
         return dependency.LoggedInViewController
     }
     // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
+    
+    let nickName: String
+    init(dependency: LoggedInDependency, nickName: String) {
+        self.nickName = nickName
+        super.init(dependency: dependency)
+    }
 }
 
 // MARK: - Builder
 
 protocol LoggedInBuildable: Buildable {
-    func build(withListener listener: LoggedInListener) -> LoggedInRouting
+    func build(withListener listener: LoggedInListener,
+               nickName: String) -> LoggedInRouting
 }
 
 final class LoggedInBuilder: Builder<LoggedInDependency>, LoggedInBuildable {
@@ -36,10 +43,14 @@ final class LoggedInBuilder: Builder<LoggedInDependency>, LoggedInBuildable {
         super.init(dependency: dependency)
     }
 
-    func build(withListener listener: LoggedInListener) -> LoggedInRouting {
-        let component = LoggedInComponent(dependency: dependency)
+    func build(withListener listener: LoggedInListener,
+               nickName: String) -> LoggedInRouting {
+        let component = LoggedInComponent(dependency: dependency,
+                                          nickName: nickName)
         let interactor = LoggedInInteractor()
         interactor.listener = listener
-        return LoggedInRouter(interactor: interactor, viewController: component.LoggedInViewController)
+        let memosBuilder = MemosBuilder(dependency: component)
+        return LoggedInRouter(interactor: interactor, viewController: component.LoggedInViewController,
+                              memosBuilder: memosBuilder)
     }
 }

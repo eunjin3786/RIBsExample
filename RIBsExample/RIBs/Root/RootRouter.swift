@@ -48,14 +48,15 @@ final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, Ro
         viewController.present(viewController: loggedOutRouter.viewControllable)
     }
     
-    func routeToLoggedInRIB() {
+    func routeToLoggedInRIB(nickName: String) {
         if let child = loggedOutRouter {
             detachChild(child)
             self.loggedOutRouter = nil
             viewController.dismiss(viewController: child.viewControllable)
         }
         
-        let loggedInRouter = loggedInBuilder.build(withListener: interactor)
+        let loggedInRouter = loggedInBuilder.build(withListener: interactor,
+                                                   nickName: nickName)
         attachChild(loggedInRouter)
     }
 }

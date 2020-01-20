@@ -1,5 +1,5 @@
 //
-//  LoggedOutInteractor.swift
+//  AddMemoInteractor.swift
 //  RIBsExample
 //
 //  Created by Jinny on 2020/01/20.
@@ -9,29 +9,27 @@
 import RIBs
 import RxSwift
 
-protocol LoggedOutRouting: ViewableRouting {
+protocol AddMemoRouting: ViewableRouting {
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
 }
 
-protocol LoggedOutPresentable: Presentable {
-    var listener: LoggedOutPresentableListener? { get set }
+protocol AddMemoPresentable: Presentable {
+    var listener: AddMemoPresentableListener? { get set }
     // TODO: Declare methods the interactor can invoke the presenter to present data.
 }
 
-protocol LoggedOutListener: class {
+protocol AddMemoListener: class {
     // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
-    func didLogin(nickName: String)
 }
 
-final class LoggedOutInteractor: PresentableInteractor<LoggedOutPresentable>, LoggedOutInteractable, LoggedOutPresentableListener {
+final class AddMemoInteractor: PresentableInteractor<AddMemoPresentable>, AddMemoInteractable, AddMemoPresentableListener {
 
-
-    weak var router: LoggedOutRouting?
-    weak var listener: LoggedOutListener?
+    weak var router: AddMemoRouting?
+    weak var listener: AddMemoListener?
 
     // TODO: Add additional dependencies to constructor. Do not perform any logic
     // in constructor.
-    override init(presenter: LoggedOutPresentable) {
+    override init(presenter: AddMemoPresentable) {
         super.init(presenter: presenter)
         presenter.listener = self
     }
@@ -44,9 +42,5 @@ final class LoggedOutInteractor: PresentableInteractor<LoggedOutPresentable>, Lo
     override func willResignActive() {
         super.willResignActive()
         // TODO: Pause any business logic.
-    }
-    
-    func login(nickName: String) {
-        listener?.didLogin(nickName: nickName)
     }
 }

@@ -12,6 +12,7 @@ import RxSwift
 protocol LoggedInRouting: Routing {
     func cleanupViews()
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
+    func routeToMemosRIB()
 }
 
 protocol LoggedInListener: class {
