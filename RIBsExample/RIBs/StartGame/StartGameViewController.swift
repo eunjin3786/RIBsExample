@@ -15,6 +15,7 @@ protocol StartGamePresentableListener: class {
     // TODO: Declare properties and methods that the view controller can invoke to perform
     // business logic, such as signIn(). This protocol is implemented by the corresponding
     // interactor class.
+    func startGame()
 }
 
 final class StartGameViewController: UIViewController, StartGamePresentable, StartGameViewControllable {
@@ -26,6 +27,8 @@ final class StartGameViewController: UIViewController, StartGamePresentable, Sta
     weak var listener: StartGamePresentableListener?
     private let player1Name: String
     private let player2Name: String
+    
+    private let disposeBag = DisposeBag()
     
     init(player1Name: String,
          player2Name: String) {
@@ -42,5 +45,9 @@ final class StartGameViewController: UIViewController, StartGamePresentable, Sta
         super.viewDidLoad()
         player1NameLabel.text = player1Name
         player2NameLabel.text = player2Name
+        
+        startButton.rx.tap.subscribe(onNext: { [weak self] _ in
+            self?.listener?.startGame()
+        }).disposed(by: disposeBag)
     }
 }
