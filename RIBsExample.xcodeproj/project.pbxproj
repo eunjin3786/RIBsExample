@@ -94,6 +94,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C22B165923D5E41000257D72 /* Memos */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Memos;
+			sourceTree = "<group>";
+		};
+		C22B165A23D5E42100257D72 /* AddMemo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AddMemo;
+			sourceTree = "<group>";
+		};
 		C28BFDCC23D54063002C5E5C = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +157,8 @@
 				C28BFDFB23D541C6002C5E5C /* Root */,
 				C28BFE0723D54597002C5E5C /* LoggedOut */,
 				C28BFE1223D570B8002C5E5C /* LoggedIn */,
+				C22B165923D5E41000257D72 /* Memos */,
+				C22B165A23D5E42100257D72 /* AddMemo */,
 			);
 			path = RIBs;
 			sourceTree = "<group>";
