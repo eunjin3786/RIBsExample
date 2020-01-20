@@ -20,7 +20,7 @@ protocol LoggedOutPresentableListener: class {
 
 final class LoggedOutViewController: UIViewController, LoggedOutPresentable, LoggedOutViewControllable {
     
-    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var nickNameTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     
     weak var listener: LoggedOutPresentableListener?
