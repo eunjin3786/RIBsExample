@@ -1,5 +1,5 @@
 //
-//  LoggedInInteractor.swift
+//  StartGameInteractor.swift
 //  RIBsExample
 //
 //  Created by Jinny on 2020/01/20.
@@ -9,24 +9,30 @@
 import RIBs
 import RxSwift
 
-protocol LoggedInRouting: Routing {
-    func cleanupViews()
+protocol StartGameRouting: ViewableRouting {
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
-    func routeToStartGameRIB() 
 }
 
-protocol LoggedInListener: class {
+protocol StartGamePresentable: Presentable {
+    var listener: StartGamePresentableListener? { get set }
+    // TODO: Declare methods the interactor can invoke the presenter to present data.
+}
+
+protocol StartGameListener: class {
     // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
 }
 
-final class LoggedInInteractor: Interactor, LoggedInInteractable {
+final class StartGameInteractor: PresentableInteractor<StartGamePresentable>, StartGameInteractable, StartGamePresentableListener {
 
-    weak var router: LoggedInRouting?
-    weak var listener: LoggedInListener?
+    weak var router: StartGameRouting?
+    weak var listener: StartGameListener?
 
     // TODO: Add additional dependencies to constructor. Do not perform any logic
     // in constructor.
-    override init() {}
+    override init(presenter: StartGamePresentable) {
+        super.init(presenter: presenter)
+        presenter.listener = self
+    }
 
     override func didBecomeActive() {
         super.didBecomeActive()
@@ -35,8 +41,6 @@ final class LoggedInInteractor: Interactor, LoggedInInteractable {
 
     override func willResignActive() {
         super.willResignActive()
-
-        router?.cleanupViews()
         // TODO: Pause any business logic.
     }
 }

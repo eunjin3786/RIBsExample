@@ -28,6 +28,11 @@
 		C28BFE1623D570E6002C5E5C /* LoggedInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28BFE1323D570E6002C5E5C /* LoggedInRouter.swift */; };
 		C28BFE1723D570E6002C5E5C /* LoggedInBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28BFE1423D570E6002C5E5C /* LoggedInBuilder.swift */; };
 		C28BFE1823D570E6002C5E5C /* LoggedInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28BFE1523D570E6002C5E5C /* LoggedInInteractor.swift */; };
+		C28BFE1F23D57390002C5E5C /* StartGameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28BFE1A23D57390002C5E5C /* StartGameRouter.swift */; };
+		C28BFE2023D57390002C5E5C /* StartGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28BFE1B23D57390002C5E5C /* StartGameViewController.swift */; };
+		C28BFE2123D57390002C5E5C /* StartGameBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28BFE1C23D57390002C5E5C /* StartGameBuilder.swift */; };
+		C28BFE2223D57390002C5E5C /* StartGameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28BFE1D23D57390002C5E5C /* StartGameInteractor.swift */; };
+		C28BFE2323D57390002C5E5C /* StartGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C28BFE1E23D57390002C5E5C /* StartGameViewController.xib */; };
 		F1415D87CE20FA5DB228C8B6 /* Pods_RIBsExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6173541E74C816CFAD21695 /* Pods_RIBsExample.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +75,11 @@
 		C28BFE1323D570E6002C5E5C /* LoggedInRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInRouter.swift; sourceTree = "<group>"; };
 		C28BFE1423D570E6002C5E5C /* LoggedInBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInBuilder.swift; sourceTree = "<group>"; };
 		C28BFE1523D570E6002C5E5C /* LoggedInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInInteractor.swift; sourceTree = "<group>"; };
+		C28BFE1A23D57390002C5E5C /* StartGameRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameRouter.swift; sourceTree = "<group>"; };
+		C28BFE1B23D57390002C5E5C /* StartGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameViewController.swift; sourceTree = "<group>"; };
+		C28BFE1C23D57390002C5E5C /* StartGameBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameBuilder.swift; sourceTree = "<group>"; };
+		C28BFE1D23D57390002C5E5C /* StartGameInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameInteractor.swift; sourceTree = "<group>"; };
+		C28BFE1E23D57390002C5E5C /* StartGameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartGameViewController.xib; sourceTree = "<group>"; };
 		D6173541E74C816CFAD21695 /* Pods_RIBsExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RIBsExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1004631ECC777FCDEE74438 /* Pods_RIBsExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RIBsExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -143,6 +153,7 @@
 				C28BFDFB23D541C6002C5E5C /* Root */,
 				C28BFE0723D54597002C5E5C /* LoggedOut */,
 				C28BFE1223D570B8002C5E5C /* LoggedIn */,
+				C28BFE1923D5736E002C5E5C /* StartGame */,
 			);
 			path = RIBs;
 			sourceTree = "<group>";
@@ -188,6 +199,18 @@
 				C28BFE1523D570E6002C5E5C /* LoggedInInteractor.swift */,
 			);
 			path = LoggedIn;
+			sourceTree = "<group>";
+		};
+		C28BFE1923D5736E002C5E5C /* StartGame */ = {
+			isa = PBXGroup;
+			children = (
+				C28BFE1A23D57390002C5E5C /* StartGameRouter.swift */,
+				C28BFE1B23D57390002C5E5C /* StartGameViewController.swift */,
+				C28BFE1C23D57390002C5E5C /* StartGameBuilder.swift */,
+				C28BFE1D23D57390002C5E5C /* StartGameInteractor.swift */,
+				C28BFE1E23D57390002C5E5C /* StartGameViewController.xib */,
+			);
+			path = StartGame;
 			sourceTree = "<group>";
 		};
 		DC4DFA3B41E108D8769FE622 /* Frameworks */ = {
@@ -296,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C28BFDE523D54065002C5E5C /* LaunchScreen.storyboard in Resources */,
+				C28BFE2323D57390002C5E5C /* StartGameViewController.xib in Resources */,
 				C28BFE1123D545C5002C5E5C /* LoggedOutViewController.xib in Resources */,
 				C28BFDE223D54065002C5E5C /* Assets.xcassets in Resources */,
 				C28BFDE023D54063002C5E5C /* Main.storyboard in Resources */,
@@ -400,17 +424,21 @@
 				C28BFE1723D570E6002C5E5C /* LoggedInBuilder.swift in Sources */,
 				C28BFE0123D541D7002C5E5C /* RootViewController.swift in Sources */,
 				C28BFE0F23D545C5002C5E5C /* LoggedOutBuilder.swift in Sources */,
+				C28BFE2223D57390002C5E5C /* StartGameInteractor.swift in Sources */,
 				C28BFE0623D5422A002C5E5C /* AppComponent.swift in Sources */,
 				C28BFE0023D541D7002C5E5C /* RootRouter.swift in Sources */,
 				C28BFE0323D541D7002C5E5C /* RootInteractor.swift in Sources */,
+				C28BFE2023D57390002C5E5C /* StartGameViewController.swift in Sources */,
 				C28BFE1023D545C5002C5E5C /* LoggedOutInteractor.swift in Sources */,
 				C28BFE0D23D545C5002C5E5C /* LoggedOutRouter.swift in Sources */,
 				C28BFDDD23D54063002C5E5C /* ViewController.swift in Sources */,
+				C28BFE1F23D57390002C5E5C /* StartGameRouter.swift in Sources */,
 				C28BFDD923D54063002C5E5C /* AppDelegate.swift in Sources */,
 				C28BFDDB23D54063002C5E5C /* SceneDelegate.swift in Sources */,
 				C28BFE1623D570E6002C5E5C /* LoggedInRouter.swift in Sources */,
 				C28BFE0223D541D7002C5E5C /* RootBuilder.swift in Sources */,
 				C28BFE1823D570E6002C5E5C /* LoggedInInteractor.swift in Sources */,
+				C28BFE2123D57390002C5E5C /* StartGameBuilder.swift in Sources */,
 				C28BFE0E23D545C5002C5E5C /* LoggedOutViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
