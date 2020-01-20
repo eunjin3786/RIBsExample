@@ -6,12 +6,13 @@ target 'RIBsExample' do
   use_frameworks!
 
   # Pods for RIBsExample
-  pod 'RIBs', '~> 0.9'
+  pod 'RIBs', :git=> 'https://github.com/uber/RIBs', :tag => '0.9.2'
+  pod 'RxCocoa', '~> 5.0'
 
   target 'RIBsExampleTests' do
     inherit! :search_paths
     # Pods for testing
-    pod 'RIBs', '~> 0.9'
+    pod 'RIBs', :git=> 'https://github.com/uber/RIBs', :tag => '0.9.2'
   end
 
 end
