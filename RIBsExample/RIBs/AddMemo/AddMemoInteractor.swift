@@ -1,5 +1,5 @@
 //
-//  GameInteractor.swift
+//  AddMemoInteractor.swift
 //  RIBsExample
 //
 //  Created by Jinny on 2020/01/20.
@@ -9,27 +9,27 @@
 import RIBs
 import RxSwift
 
-protocol GameRouting: ViewableRouting {
+protocol AddMemoRouting: ViewableRouting {
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
 }
 
-protocol GamePresentable: Presentable {
-    var listener: GamePresentableListener? { get set }
+protocol AddMemoPresentable: Presentable {
+    var listener: AddMemoPresentableListener? { get set }
     // TODO: Declare methods the interactor can invoke the presenter to present data.
 }
 
-protocol GameListener: class {
+protocol AddMemoListener: class {
     // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
 }
 
-final class GameInteractor: PresentableInteractor<GamePresentable>, GameInteractable, GamePresentableListener {
+final class AddMemoInteractor: PresentableInteractor<AddMemoPresentable>, AddMemoInteractable, AddMemoPresentableListener {
 
-    weak var router: GameRouting?
-    weak var listener: GameListener?
+    weak var router: AddMemoRouting?
+    weak var listener: AddMemoListener?
 
     // TODO: Add additional dependencies to constructor. Do not perform any logic
     // in constructor.
-    override init(presenter: GamePresentable) {
+    override init(presenter: AddMemoPresentable) {
         super.init(presenter: presenter)
         presenter.listener = self
     }

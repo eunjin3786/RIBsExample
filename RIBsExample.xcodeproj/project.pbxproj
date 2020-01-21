@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		7D8370B12BE5504E35F6A03D /* Pods_RIBsExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1004631ECC777FCDEE74438 /* Pods_RIBsExampleTests.framework */; };
+		C22B167423D5ED2300257D72 /* MemosRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22B166F23D5ED2300257D72 /* MemosRouter.swift */; };
+		C22B167523D5ED2300257D72 /* MemosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22B167023D5ED2300257D72 /* MemosViewController.swift */; };
+		C22B167623D5ED2300257D72 /* MemosBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22B167123D5ED2300257D72 /* MemosBuilder.swift */; };
+		C22B167723D5ED2300257D72 /* MemosInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22B167223D5ED2300257D72 /* MemosInteractor.swift */; };
+		C22B167823D5ED2300257D72 /* MemosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C22B167323D5ED2300257D72 /* MemosViewController.xib */; };
+		C22B167E23D5EEA800257D72 /* AddMemoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22B167923D5EEA800257D72 /* AddMemoRouter.swift */; };
+		C22B167F23D5EEA800257D72 /* AddMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22B167A23D5EEA800257D72 /* AddMemoViewController.swift */; };
+		C22B168023D5EEA800257D72 /* AddMemoBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22B167B23D5EEA800257D72 /* AddMemoBuilder.swift */; };
+		C22B168123D5EEA800257D72 /* AddMemoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22B167C23D5EEA800257D72 /* AddMemoInteractor.swift */; };
+		C22B168223D5EEA800257D72 /* AddMemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C22B167D23D5EEA800257D72 /* AddMemoViewController.xib */; };
 		C28BFDD923D54063002C5E5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28BFDD823D54063002C5E5C /* AppDelegate.swift */; };
 		C28BFDDB23D54063002C5E5C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28BFDDA23D54063002C5E5C /* SceneDelegate.swift */; };
 		C28BFDDD23D54063002C5E5C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28BFDDC23D54063002C5E5C /* ViewController.swift */; };
@@ -28,17 +38,6 @@
 		C28BFE1623D570E6002C5E5C /* LoggedInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28BFE1323D570E6002C5E5C /* LoggedInRouter.swift */; };
 		C28BFE1723D570E6002C5E5C /* LoggedInBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28BFE1423D570E6002C5E5C /* LoggedInBuilder.swift */; };
 		C28BFE1823D570E6002C5E5C /* LoggedInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28BFE1523D570E6002C5E5C /* LoggedInInteractor.swift */; };
-		C28BFE1F23D57390002C5E5C /* StartGameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28BFE1A23D57390002C5E5C /* StartGameRouter.swift */; };
-		C28BFE2023D57390002C5E5C /* StartGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28BFE1B23D57390002C5E5C /* StartGameViewController.swift */; };
-		C28BFE2123D57390002C5E5C /* StartGameBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28BFE1C23D57390002C5E5C /* StartGameBuilder.swift */; };
-		C28BFE2223D57390002C5E5C /* StartGameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28BFE1D23D57390002C5E5C /* StartGameInteractor.swift */; };
-		C28BFE2323D57390002C5E5C /* StartGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C28BFE1E23D57390002C5E5C /* StartGameViewController.xib */; };
-		C28BFE2A23D586C9002C5E5C /* GameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28BFE2523D586C9002C5E5C /* GameRouter.swift */; };
-		C28BFE2B23D586C9002C5E5C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28BFE2623D586C9002C5E5C /* GameViewController.swift */; };
-		C28BFE2C23D586C9002C5E5C /* GameBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28BFE2723D586C9002C5E5C /* GameBuilder.swift */; };
-		C28BFE2D23D586C9002C5E5C /* GameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28BFE2823D586C9002C5E5C /* GameInteractor.swift */; };
-		C28BFE2E23D586C9002C5E5C /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C28BFE2923D586C9002C5E5C /* GameViewController.xib */; };
-		F1415D87CE20FA5DB228C8B6 /* Pods_RIBsExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6173541E74C816CFAD21695 /* Pods_RIBsExample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +55,16 @@
 		4C955CB56227639BFD634AF4 /* Pods-RIBsExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RIBsExampleTests.release.xcconfig"; path = "Target Support Files/Pods-RIBsExampleTests/Pods-RIBsExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		6DD0296CB02115F4B833C757 /* Pods-RIBsExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RIBsExample.release.xcconfig"; path = "Target Support Files/Pods-RIBsExample/Pods-RIBsExample.release.xcconfig"; sourceTree = "<group>"; };
 		807A853C3A82CF53D9336421 /* Pods-RIBsExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RIBsExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-RIBsExampleTests/Pods-RIBsExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C22B166F23D5ED2300257D72 /* MemosRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemosRouter.swift; sourceTree = "<group>"; };
+		C22B167023D5ED2300257D72 /* MemosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemosViewController.swift; sourceTree = "<group>"; };
+		C22B167123D5ED2300257D72 /* MemosBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemosBuilder.swift; sourceTree = "<group>"; };
+		C22B167223D5ED2300257D72 /* MemosInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemosInteractor.swift; sourceTree = "<group>"; };
+		C22B167323D5ED2300257D72 /* MemosViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemosViewController.xib; sourceTree = "<group>"; };
+		C22B167923D5EEA800257D72 /* AddMemoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemoRouter.swift; sourceTree = "<group>"; };
+		C22B167A23D5EEA800257D72 /* AddMemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemoViewController.swift; sourceTree = "<group>"; };
+		C22B167B23D5EEA800257D72 /* AddMemoBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemoBuilder.swift; sourceTree = "<group>"; };
+		C22B167C23D5EEA800257D72 /* AddMemoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemoInteractor.swift; sourceTree = "<group>"; };
+		C22B167D23D5EEA800257D72 /* AddMemoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddMemoViewController.xib; sourceTree = "<group>"; };
 		C28BFDD523D54063002C5E5C /* RIBsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RIBsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28BFDD823D54063002C5E5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C28BFDDA23D54063002C5E5C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +123,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C22B165923D5E41000257D72 /* Memos */ = {
+			isa = PBXGroup;
+			children = (
+				C22B166F23D5ED2300257D72 /* MemosRouter.swift */,
+				C22B167023D5ED2300257D72 /* MemosViewController.swift */,
+				C22B167123D5ED2300257D72 /* MemosBuilder.swift */,
+				C22B167223D5ED2300257D72 /* MemosInteractor.swift */,
+				C22B167323D5ED2300257D72 /* MemosViewController.xib */,
+			);
+			path = Memos;
+			sourceTree = "<group>";
+		};
+		C22B165A23D5E42100257D72 /* AddMemo */ = {
+			isa = PBXGroup;
+			children = (
+				C22B167923D5EEA800257D72 /* AddMemoRouter.swift */,
+				C22B167A23D5EEA800257D72 /* AddMemoViewController.swift */,
+				C22B167B23D5EEA800257D72 /* AddMemoBuilder.swift */,
+				C22B167C23D5EEA800257D72 /* AddMemoInteractor.swift */,
+				C22B167D23D5EEA800257D72 /* AddMemoViewController.xib */,
+			);
+			path = AddMemo;
+			sourceTree = "<group>";
+		};
 		C28BFDCC23D54063002C5E5C = {
 			isa = PBXGroup;
 			children = (
@@ -163,8 +196,8 @@
 				C28BFDFB23D541C6002C5E5C /* Root */,
 				C28BFE0723D54597002C5E5C /* LoggedOut */,
 				C28BFE1223D570B8002C5E5C /* LoggedIn */,
-				C28BFE1923D5736E002C5E5C /* StartGame */,
-				C28BFE2423D586AB002C5E5C /* Game */,
+				C22B165923D5E41000257D72 /* Memos */,
+				C22B165A23D5E42100257D72 /* AddMemo */,
 			);
 			path = RIBs;
 			sourceTree = "<group>";
@@ -345,7 +378,9 @@
 				C28BFE2323D57390002C5E5C /* StartGameViewController.xib in Resources */,
 				C28BFE2E23D586C9002C5E5C /* GameViewController.xib in Resources */,
 				C28BFE1123D545C5002C5E5C /* LoggedOutViewController.xib in Resources */,
+				C22B167823D5ED2300257D72 /* MemosViewController.xib in Resources */,
 				C28BFDE223D54065002C5E5C /* Assets.xcassets in Resources */,
+				C22B168223D5EEA800257D72 /* AddMemoViewController.xib in Resources */,
 				C28BFDE023D54063002C5E5C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,11 +481,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C28BFE1723D570E6002C5E5C /* LoggedInBuilder.swift in Sources */,
+				C22B168023D5EEA800257D72 /* AddMemoBuilder.swift in Sources */,
 				C28BFE0123D541D7002C5E5C /* RootViewController.swift in Sources */,
 				C28BFE0F23D545C5002C5E5C /* LoggedOutBuilder.swift in Sources */,
 				C28BFE2223D57390002C5E5C /* StartGameInteractor.swift in Sources */,
 				C28BFE0623D5422A002C5E5C /* AppComponent.swift in Sources */,
 				C28BFE0023D541D7002C5E5C /* RootRouter.swift in Sources */,
+				C22B168123D5EEA800257D72 /* AddMemoInteractor.swift in Sources */,
 				C28BFE0323D541D7002C5E5C /* RootInteractor.swift in Sources */,
 				C28BFE2B23D586C9002C5E5C /* GameViewController.swift in Sources */,
 				C28BFE2023D57390002C5E5C /* StartGameViewController.swift in Sources */,
@@ -463,10 +500,14 @@
 				C28BFDD923D54063002C5E5C /* AppDelegate.swift in Sources */,
 				C28BFDDB23D54063002C5E5C /* SceneDelegate.swift in Sources */,
 				C28BFE1623D570E6002C5E5C /* LoggedInRouter.swift in Sources */,
-				C28BFE2C23D586C9002C5E5C /* GameBuilder.swift in Sources */,
+				C22B167523D5ED2300257D72 /* MemosViewController.swift in Sources */,
 				C28BFE0223D541D7002C5E5C /* RootBuilder.swift in Sources */,
+				C22B167E23D5EEA800257D72 /* AddMemoRouter.swift in Sources */,
 				C28BFE1823D570E6002C5E5C /* LoggedInInteractor.swift in Sources */,
-				C28BFE2123D57390002C5E5C /* StartGameBuilder.swift in Sources */,
+				C22B167623D5ED2300257D72 /* MemosBuilder.swift in Sources */,
+				C22B167423D5ED2300257D72 /* MemosRouter.swift in Sources */,
+				C22B167F23D5EEA800257D72 /* AddMemoViewController.swift in Sources */,
+				C22B167723D5ED2300257D72 /* MemosInteractor.swift in Sources */,
 				C28BFE0E23D545C5002C5E5C /* LoggedOutViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

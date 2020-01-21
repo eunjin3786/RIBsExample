@@ -1,5 +1,5 @@
 //
-//  GameRouter.swift
+//  AddMemoRouter.swift
 //  RIBsExample
 //
 //  Created by Jinny on 2020/01/20.
@@ -8,19 +8,19 @@
 
 import RIBs
 
-protocol GameInteractable: Interactable {
-    var router: GameRouting? { get set }
-    var listener: GameListener? { get set }
+protocol AddMemoInteractable: Interactable {
+    var router: AddMemoRouting? { get set }
+    var listener: AddMemoListener? { get set }
 }
 
-protocol GameViewControllable: ViewControllable {
+protocol AddMemoViewControllable: ViewControllable {
     // TODO: Declare methods the router invokes to manipulate the view hierarchy.
 }
 
-final class GameRouter: ViewableRouter<GameInteractable, GameViewControllable>, GameRouting {
+final class AddMemoRouter: ViewableRouter<AddMemoInteractable, AddMemoViewControllable>, AddMemoRouting {
 
     // TODO: Constructor inject child builder protocols to allow building children.
-    override init(interactor: GameInteractable, viewController: GameViewControllable) {
+    override init(interactor: AddMemoInteractable, viewController: AddMemoViewControllable) {
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
     }

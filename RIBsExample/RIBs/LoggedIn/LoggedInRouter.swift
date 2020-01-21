@@ -8,7 +8,7 @@
 
 import RIBs
 
-protocol LoggedInInteractable: Interactable, StartGameListener, GameListener {
+protocol LoggedInInteractable: Interactable, MemosListener {
     var router: LoggedInRouting? { get set }
     var listener: LoggedInListener? { get set }
 }
@@ -18,59 +18,36 @@ protocol LoggedInViewControllable: ViewControllable {
     // this RIB does not own its own view, this protocol is conformed to by one of this
     // RIB's ancestor RIBs' view.
     func present(viewController: ViewControllable)
-    func dismiss(viewController: ViewControllable)
 }
 
 final class LoggedInRouter: Router<LoggedInInteractable>, LoggedInRouting {
 
+    private let memosBuilder: MemosBuildable
     // TODO: Constructor inject child builder protocols to allow building children.
-    
-    private let startGameBuilder: StartGameBuildable
-    private var startGameRouter: StartGameRouting?
-    
-    private let gameBuilder: GameBuildable
-    private var gameRouter: GameRouting?
-    
     init(interactor: LoggedInInteractable,
          viewController: LoggedInViewControllable,
-         startGameBuilder: StartGameBuildable,
-         gameBuilder: GameBuildable) {
+         memosBuilder: MemosBuildable) {
         self.viewController = viewController
-        self.startGameBuilder = startGameBuilder
-        self.gameBuilder = gameBuilder
+        self.memosBuilder = memosBuilder
         super.init(interactor: interactor)
         interactor.router = self
     }
     
     override func didLoad() {
-        routeToStartGameRIB()
+        super.didLoad()
+        routeToMemosRIB()
     }
-    
+
     func cleanupViews() {
         // TODO: Since this router does not own its view, it needs to cleanup the views
         // it may have added to the view hierarchy, when its interactor is deactivated.
     }
-    
-    func routeToStartGameRIB() {
-        let startGameRouter = startGameBuilder.build(withListener: interactor)
-        attachChild(startGameRouter)
-        self.startGameRouter = startGameRouter
-        viewController.present(viewController: startGameRouter.viewControllable)
-    }
-    
-    func routeToGameRIB() {
-        if let child = startGameRouter {
-            detachChild(child)
-            self.startGameRouter = nil
-            viewController.dismiss(viewController: child.viewControllable)
-        }
-        
-        let gameRouter = gameBuilder.build(withListener: interactor)
-        attachChild(gameRouter)
-        self.gameRouter = gameRouter
-        viewController.present(viewController: gameRouter.viewControllable)
-    }
 
+    func routeToMemosRIB() {
+        let memosRouter = memosBuilder.build(withListener: interactor)
+        attachChild(memosRouter)
+        viewController.present(viewController: memosRouter.viewControllable)
+    }
     // MARK: - Private
 
     private let viewController: LoggedInViewControllable

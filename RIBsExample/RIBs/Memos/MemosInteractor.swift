@@ -1,5 +1,5 @@
 //
-//  StartGameInteractor.swift
+//  MemosInteractor.swift
 //  RIBsExample
 //
 //  Created by Jinny on 2020/01/20.
@@ -9,28 +9,28 @@
 import RIBs
 import RxSwift
 
-protocol StartGameRouting: ViewableRouting {
+protocol MemosRouting: ViewableRouting {
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
+    func routeToAddMemoRIB()
 }
 
-protocol StartGamePresentable: Presentable {
-    var listener: StartGamePresentableListener? { get set }
+protocol MemosPresentable: Presentable {
+    var listener: MemosPresentableListener? { get set }
     // TODO: Declare methods the interactor can invoke the presenter to present data.
 }
 
-protocol StartGameListener: class {
+protocol MemosListener: class {
     // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
-    func didStartGame()
 }
 
-final class StartGameInteractor: PresentableInteractor<StartGamePresentable>, StartGameInteractable, StartGamePresentableListener {
+final class MemosInteractor: PresentableInteractor<MemosPresentable>, MemosInteractable, MemosPresentableListener {
 
-    weak var router: StartGameRouting?
-    weak var listener: StartGameListener?
+    weak var router: MemosRouting?
+    weak var listener: MemosListener?
 
     // TODO: Add additional dependencies to constructor. Do not perform any logic
     // in constructor.
-    override init(presenter: StartGamePresentable) {
+    override init(presenter: MemosPresentable) {
         super.init(presenter: presenter)
         presenter.listener = self
     }
@@ -45,7 +45,7 @@ final class StartGameInteractor: PresentableInteractor<StartGamePresentable>, St
         // TODO: Pause any business logic.
     }
     
-    func startGame() {
-        listener?.didStartGame()
+    func addMemoDidTap() {
+        router?.routeToAddMemoRIB()
     }
 }

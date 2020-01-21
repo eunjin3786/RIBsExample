@@ -12,7 +12,7 @@ import RxSwift
 protocol RootRouting: ViewableRouting {
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
     func routeToLoggedOutRIB()
-    func routeToLoggedInRIB(player1Name: String, player2Name: String)
+    func routeToLoggedInRIB(nickName: String)
 }
 
 protocol RootPresentable: Presentable {
@@ -46,7 +46,7 @@ final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteract
         // TODO: Pause any business logic.
     }
     
-    func didLogin(player1Name: String, player2Name: String) {
-        router?.routeToLoggedInRIB(player1Name: player1Name, player2Name: player2Name)
+    func didLogin(nickName: String) {
+        router?.routeToLoggedInRIB(nickName: nickName)
     }
 }
